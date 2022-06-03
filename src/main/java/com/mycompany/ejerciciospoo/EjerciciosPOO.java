@@ -32,12 +32,27 @@ public class EjerciciosPOO {
         
         cuenta1.setNombreCliente(nombre);
         cuenta1.setNumeroCuenta(numero);
-        cuenta1.setSaldo(tipo);
-        cuenta1.setTipoInteres(importe);
-        
+        cuenta1.setSaldo(importe);
+        cuenta1.setTipoInteres(tipo);
         cuenta1.ingreso(5000);
-        
         System.out.println(cuenta1.showInfo());
+        
+        Cuenta cuenta2=new Cuenta("Cuenta2", "9876543",1.45,0);
+        System.out.println(cuenta2.showInfo());
+        
+        Cuenta cuenta3=new Cuenta(cuenta1);
+        System.out.println(cuenta3.showInfo());
+        
+        System.out.println("\n\n\n");
+        //transferencia
+        if (cuenta1.transferencia(1000, cuenta2)) {
+            System.out.println("Transferencia realizada con exito\n");
+            System.out.println(cuenta1.showInfo());
+            System.out.println(cuenta2.showInfo());
+        }
+        else{
+            System.out.println("ERROR No cuentas con suficente saldo");
+        }
         
     }
 }
