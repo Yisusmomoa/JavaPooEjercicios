@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class EjerciciosPOO {
 
     public static void main(String[] args) {
+        //clase Cuenta
         Scanner sc = new Scanner(System.in);
         String nombre, numero;
         double tipo, importe;
